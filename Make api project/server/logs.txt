@@ -51,3 +51,11 @@ User: Raju, Role: user
 User: Raju, Role: user
 User: Chetan, Role: user
 User: Chetan, Role: user
+User: Chetan, Role: user
+User: chetansing_rajput01, Role: user
+User: cr, Role: user
+User: chetansing_rajput101, Role: user
+User: chetanrajput9265@gmail.com, Role: user
+User: chetanrajput9265@gmail.com, Role: user
+User: chetanrajput9265@gmail.com, Role: user
+User: chetanrajput9265@gmail.com, Role: user

@@ -33,7 +33,6 @@ const User = () => {
 
         }
     }
-
     
     useEffect(() => {
         fetchData()

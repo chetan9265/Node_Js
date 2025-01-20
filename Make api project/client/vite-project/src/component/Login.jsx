@@ -15,9 +15,7 @@ const LoginPage = () => {
 headers:{
     'Content-Type': 'application/json',
     token:`Bearer ${localStorage.getItem('autharization_token')}`
-},
-WithCredentials:true
-    },{
+}},{
     }).then((res)=>{  
         navigate('/')  
         localStorage.setItem("token",res.data.token)

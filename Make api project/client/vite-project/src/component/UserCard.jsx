@@ -1,11 +1,25 @@
+import axios from 'axios';
 import React from 'react';
 import { Link } from 'react-router';
 
 const UserDetails = ({ username,email,id, role,dateOfBirth,location, }) => {
+const deleteUser=(id)=>{
+  axios.delete(`${import.meta.env.VITE_URL}/Userdelete/${id}`,{
+    headers: {
+      'Content-Type': "application/json",
+      token: `Bearer ${localStorage.getItem('token')}`
+  }
+  }).then((res)=>{
+    console.log(res.data);
+  }).catch((err)=>{
+    console.log(err);
+  })
+}
+
   return (
     <div key={id}>
-      <div className="user-details-container" >
-        <div className="user-card" >
+      <div className="user-details-container" key={id} >
+        <div className="user-card" key={id} >
           <h2>{username}</h2>
           <p>
             <strong>Email:</strong> {email}
@@ -28,6 +42,7 @@ const UserDetails = ({ username,email,id, role,dateOfBirth,location, }) => {
               </button>
               <button
                 className="delete-button"
+                onClick={()=>deleteUser(id)}
               >
                 Delete
               </button>
