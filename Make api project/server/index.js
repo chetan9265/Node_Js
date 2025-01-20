@@ -7,12 +7,12 @@ app.use(cors({
     credentials: true
 }))
 const { expressRouter } = require("./routes/Userroutes");
-const connect = require("./db");
+const connection = require("./db");
 app.use(express.json());
 app.use("/",expressRouter)
 app.listen(process.env.PORT || 3000,()=>{
     try {
-        connect
+        connection
          console.log("Server are running at 8080")
     } catch (error) {
         console.log(error)

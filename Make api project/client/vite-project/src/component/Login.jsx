@@ -14,7 +14,7 @@ const LoginPage = () => {
     axios.post(`${import.meta.env.VITE_URL}/Usersignup`,credentials,{
 headers:{
     'Content-Type': 'application/json',
-    Token:localStorage.getItem('autharization_token')
+    token:`Bearer ${localStorage.getItem('autharization_token')}`
 },
 WithCredentials:true
     },{
@@ -23,6 +23,7 @@ WithCredentials:true
         localStorage.setItem("token",res.data.token)
         localStorage.setItem("Username",res.data.username)
         localStorage.setItem("id",res.data._id)
+        localStorage.setItem("role",res.data.role)
     })
     .catch((error) => {
         console.error(error);

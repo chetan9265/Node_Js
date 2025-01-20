@@ -7,6 +7,10 @@ const NavigationBar = () => {
   const Logout=()=>{
     localStorage.removeItem('token');
     localStorage.removeItem('Username');
+    localStorage.removeItem('role');
+    localStorage.removeItem('id');
+    
+    
   }
   return (
     <nav className="navbar">

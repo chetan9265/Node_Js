@@ -19,6 +19,7 @@ const Allroutes = () => {
               <User />
               </Private>
               } />
+              <Route path="/Signup/:id" element={<SignUp />} />
             
     </Routes>
   )

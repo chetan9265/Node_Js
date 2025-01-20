@@ -11,13 +11,13 @@ const UsergetAll = async (req, res) => {
 }
 const UserGetByid = async (req, res) => {
     const { id } = req.params;
-    console.log(id)
     if (!id) {
         return res.status(400).json({ message: "id is required" })
     }
     try {
         const UserData = await User.findById(id);
-        res.status(200).json({ UserData })
+        const {password,...rest}=UserData._doc
+        res.status(200).json({ rest })
     } catch (error) {
         res.status(500).json({ message: error?.message })
     }
@@ -40,9 +40,10 @@ const AddtheUser = async (req, res) => {
                 return res.status(500).json({ message: err })
             }
             if (hash) {
+                
                 const detailsuser = await User.create({ username, email, dateOfBirth,role:"user", location, password: hash });
                 var autharization_token = jwt.sign( {username, email, dateOfBirth,role:"user", location, password: hash } , 'asasa');
-                res.status(201).json({ message: "User created Successfully" ,autharization_token})
+             return   res.status(201).json({ message: "User created Successfully" ,autharization_token})
             }else{
             return res.status(400).json({ message: "Something went wrong" })
             }
@@ -99,11 +100,12 @@ const UpdatetheUserbyid = async (req, res) => {
         if (!UserExist) {
             return res.status(400).json({ message: "User does not exist" })
         }
-        await User.findByIdAndUpdate(id, req.body);
+        console.log(req.body)
+        await User.findByIdAndUpdate(id,req.body)
         res.status(200).json({ message: "User updated successfully" })
     } catch (error) {
 
-        res.status(500).json({ message: error?.message })
+        res.status(400).json({ message: error?.message })
     }
 }
 module.exports = { UsergetAll, UserGetByid, AddtheUser, Logintheuser, UpdatetheUserbyid }
