@@ -1,0 +1,151 @@
+#root {
+  padding: 2rem;
+  text-align: center;
+}
+
+/* .todo-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+} */
+.todo-container .Head h1{
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: rgb(35, 34, 34);
+
+}
+.Task-Input{
+  width: 350px;
+  margin: auto;
+  text-align: left;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow:2px 6px 120px rgba(0, 0, 0, 0.1)
+}
+.Task-Input input{
+  padding: 0.5rem;
+  width: 300px;
+  border: 1px solid rgb(35, 34, 34);
+  border-radius: 5px;
+  margin-bottom: 1rem;  
+}
+ .Task-Input input{
+  margin-right: 1rem;
+}
+.Check{
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  top: -19px;
+  left: -70px;
+}
+.Task-Input button{
+  padding: 0.5rem 1rem;
+  background-color: #3498db; ;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  cursor: pointer;
+}
+.Task-Input button:hover{
+  background-color: #2980b9;
+}
+.Task-Input button:active{
+  background-color: #2980b9;
+}
+.Task-List{
+  margin-top: 2rem;
+  text-align: left;
+}
+.List-head h2{
+  font-size: 1.5rem;
+  color: rgb(35, 34, 34);
+}
+.List-head {
+  display: flex;
+  gap: 200px;
+  margin: auto;
+  text-align: left;
+  justify-content: center;
+}
+
+.Data-Shows li{
+  list-style: none;
+  display: flex;
+  justify-content: center ;
+}
+.Data-Shows li h3{
+  gap: 200px;
+
+}
+
+.List-head {
+  display: flex;
+width: 700px;
+  background-color: #f4f4f4;
+  padding: 10px 20px;
+}
+.List-head .Task{
+  font-size: 1.2rem;
+  color: #333;
+  margin-right: 50px;
+}
+.List-head .Task2{
+  font-size: 1.2rem;
+  display: inline;
+  color: #333;
+  margin-left: -200px;
+}
+.List-head .Task{
+  font-size: 1.2rem;
+  color: #333;
+  
+}
+
+.List-head h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.Data-Shows {
+  padding: 10px 20px;
+  width: 700px;
+  margin: auto;
+}
+
+.Data-Shows li {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  gap: 170px;
+}
+
+.Data-Shows h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: #444;
+}
+
+button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
